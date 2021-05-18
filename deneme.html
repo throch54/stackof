@@ -11,24 +11,40 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     
   <script>
-             
+    var sayi1=0;     
+    var sayi2=0;
+    var isaret="";   
+
     function numaralar(value) {
-      document.getElementById("result").value += value
+              
+      document.getElementById("result").value += value;
     }
     function isaretler(value) {
-      
-      document.getElementById("result").value +=value;
+      sayi1=document.getElementById("result").value; 
+      isaret=value;
+      document.getElementById("result").value ="";
+      //var işlem=parseInt(sayi1).value.parseInt(sayi2)=document.getElementById("result");
+      //document.getElementsByTagName("isaretler").style.display="none";
+      //document.getElementById("result").value =value;
       
     }
+    // function isaretler(event) {
+      
+    //   document.getElementById("result").value.style.display="none";
+      
+      
+    // }
 
     function temizle() {
-      document.getElementById("result").value = ""
+      document.getElementById("result").value = "";
     }
     
     function esittir() {
-      var x=document.getElementById("result").value;
-      var y=eval(x);
-      document.getElementById("result").value = y
+      sayi2=document.getElementById("result").value;
+      document.getElementById("result").value = eval(sayi1+isaret+sayi2);
+      // var x=document.getElementById("result").value;
+      // var y=eval(x);
+      // document.getElementById("result").value = y;
     }
   </script>
 
@@ -39,7 +55,7 @@
 
 
   <div class="calculator">
-    <input id="result" placeholder="0" name="sayi" action="deneme.html" method="GET">
+    <input id="result" placeholder="0">
     <div class="buttons-container">
       <div class="button-ac ac" onclick="temizle()" value="ac">AC</div>
       <div></div>
