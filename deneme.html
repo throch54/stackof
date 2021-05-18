@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main1.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+  <script>
+             
+    function numaralar(value) {
+      document.getElementById("result").value += value
+    }
+    function isaretler(value) {
+      
+      document.getElementById("result").value +=value;
+      
+    }
+
+    function temizle() {
+      document.getElementById("result").value = ""
+    }
+    
+    function esittir() {
+      var x=document.getElementById("result").value;
+      var y=eval(x);
+      document.getElementById("result").value = y
+    }
+  </script>
+
+</head>
+
+<body>
+
+
+
+  <div class="calculator">
+    <input id="result" placeholder="0" name="sayi" action="deneme.html" method="GET">
+    <div class="buttons-container">
+      <div class="button-ac ac" onclick="temizle()" value="ac">AC</div>
+      <div></div>
+      <div></div>
+      <div class="isaretTuslari buttons bolme" value="/" onclick="isaretler('/')">÷</div>
+      <div class="buttons rakam" onclick="numaralar('7')" value="7">7</div>
+      <div class="buttons rakam" onclick="numaralar('8')" value="8">8</div>
+      <div class="buttons rakam" onclick="numaralar('9')" value="9">9</div>
+      <div class="isaretTuslari buttons carpma" onclick="isaretler('*')" value="x">x</div>
+      <div class="buttons rakam" onclick="numaralar('4')" value="4">4</div>
+      <div class="buttons rakam" onclick="numaralar('5')" value="5">5</div>
+      <div class="buttons rakam" onclick="numaralar('6')" value="6">6</div>
+      <div class="isaretTuslari buttons cikarma" onclick="isaretler('-')" value="-">-</div>
+      <div class="buttons rakam" onclick="numaralar('1')" value="1">1</div>
+      <div class="buttons rakam" onclick="numaralar('2')" value="2">2</div>
+      <div class="buttons rakam" onclick="numaralar('3')" value="3">3</div>
+      <div class="isaretTuslari buttons toplama" onclick="isaretler('+')" value="+">+</div>
+      <div class="number-0 buttons rakam" onclick="numaralar('0')" value="0">0</div>
+      <div class="buttons nokta" value="." onclick="numaralar('.')">.</div>
+      <div class="isaretTuslari buttons esittir1" value="=" onclick="esittir()">=</div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

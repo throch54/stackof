@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 25px;
+}
+.calculator {
+  background: black;
+  border-radius: 50px;
+  color: white;
+  height: 880px;
+  padding: 20px;
+  position: relative;
+  width: 563px;
+}
+
+::-webkit-input-placeholder { 
+  color:    rgb(255, 255, 255);
+}
+
+#result {
+  background-color: black;
+  color: white;
+  font-size: 130px;
+  font-weight: 300;
+  height: 158px;
+  text-align: right;
+  width: 508px;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 15px; 
+  pointer-events:none;
+  border: 1px solid black;
+ 
+}
+
+
+.buttons-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.button-ac {
+  color: black;
+  background: #a5a5a5;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 45px;
+  height: 110px;
+  justify-content: center;
+  transition: filter .3s;
+  width: 110px;
+  align-items: center;
+}
+.button-ac:active,.button-ac:focus {
+  filter: brightness(120%);
+}
+.buttons{
+  align-items: center;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 45px;
+  height: 110px;
+  justify-content: center;
+  transition: filter .3s;
+  width: 110px;
+}
+.buttons:active,.buttons:focus {
+    filter: brightness(120%);
+}
+
+.isaretTuslari {
+  background: #f1a33c;
+  }
+.isaretTuslari:active, .isaretTuslari:focus{
+  filter: brightness(120%);
+}
+
+.number-0 {
+  border-radius: 55px;
+  grid-column: 1 / span 2;
+  justify-content: flex-start;
+  padding-left: 43px;
+  width: 250px;
+}
